@@ -87,6 +87,7 @@ yarn add react-svg-pan-zoom
 - **3.10** - Upgrades deps; Migrates to React 17 and Storybook 6; Updates examples and docs to React hooks
 - **3.11** - Migrates from yarn to npm; Makes use of [chrvadala/github-actions](https://github.com/chrvadala/github-actions); Updates deps;
 - **3.12** - Migrates to gh-sponsor; Improves docs; Deprecates v1 migration guide; Upgrades deps;
+- **custom 3.13** - Force capture on eventlistener
 
 ## Some projects using react-svg-pan-zoom
 - [**Learn Anything**](https://github.com/learn-anything/learn-anything)
