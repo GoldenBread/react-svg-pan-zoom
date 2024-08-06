@@ -308,12 +308,12 @@ export default class ReactSVGPanZoom extends React.Component {
           height={value.viewerHeight}
           style={style}
 
-          onMouseDown={event => {
+          onMouseDownCapture={event => {
             let nextValue = onMouseDown(event, this.ViewerDOM, this.getTool(), this.getValue(), this.props);
             if (this.getValue() !== nextValue) this.setValue(nextValue);
             this.handleViewerEvent(event);
           }}
-          onMouseMove={event => {
+          onMouseMoveCapture={event => {
             let {left, top} = this.ViewerDOM.getBoundingClientRect();
             let x = event.clientX - Math.round(left);
             let y = event.clientY - Math.round(top);
@@ -323,47 +323,47 @@ export default class ReactSVGPanZoom extends React.Component {
             this.setState({pointerX: x, pointerY: y});
             this.handleViewerEvent(event);
           }}
-          onMouseUp={event => {
+          onMouseUpCapture={event => {
             let nextValue = onMouseUp(event, this.ViewerDOM, this.getTool(), this.getValue(), this.props);
             if (this.getValue() !== nextValue) this.setValue(nextValue);
             this.handleViewerEvent(event);
           }}
 
-          onClick={event => {
+          onClickCapture={event => {
             this.handleViewerEvent(event)
           }}
-          onDoubleClick={event => {
+          onDoubleClickCapture={event => {
             let nextValue = onDoubleClick(event, this.ViewerDOM, this.getTool(), this.getValue(), this.props);
             if (this.getValue() !== nextValue) this.setValue(nextValue);
             this.handleViewerEvent(event);
           }}
 
-          onMouseEnter={event => {
+          onMouseEnterCapture={event => {
             if (detectTouch()) return;
             let nextValue = onMouseEnterOrLeave(event, this.ViewerDOM, this.getTool(), this.getValue(), this.props);
             if (this.getValue() !== nextValue) this.setValue(nextValue);
           }}
-          onMouseLeave={event => {
+          onMouseLeaveCapture={event => {
             let nextValue = onMouseEnterOrLeave(event, this.ViewerDOM, this.getTool(), this.getValue(), this.props);
             if (this.getValue() !== nextValue) this.setValue(nextValue);
           }}
 
-          onTouchStart={event => {
+          onTouchStartCapture={event => {
             let nextValue = onTouchStart(event, this.ViewerDOM, this.getTool(), this.getValue(), this.props);
             if (this.getValue() !== nextValue) this.setValue(nextValue);
             this.handleViewerEvent(event);
           }}
-          onTouchMove={event => {
+          onTouchMoveCapture={event => {
             let nextValue = onTouchMove(event, this.ViewerDOM, this.getTool(), this.getValue(), this.props);
             if (this.getValue() !== nextValue) this.setValue(nextValue);
             this.handleViewerEvent(event);
           }}
-          onTouchEnd={event => {
+          onTouchEndCapture={event => {
             let nextValue = onTouchEnd(event, this.ViewerDOM, this.getTool(), this.getValue(), this.props);
             if (this.getValue() !== nextValue) this.setValue(nextValue);
             this.handleViewerEvent(event);
           }}
-          onTouchCancel={event => {
+          onTouchCancelCapture={event => {
             let nextValue = onTouchCancel(event, this.ViewerDOM, this.getTool(), this.getValue(), this.props);
             if (this.getValue() !== nextValue) this.setValue(nextValue);
             this.handleViewerEvent(event);
