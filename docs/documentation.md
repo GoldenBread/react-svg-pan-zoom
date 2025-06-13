@@ -26,7 +26,9 @@
 | onMouseUp         | - | `fn(viewerEvent: ViewerMouseEvent)` | Handler* for mouseup |
 | onMouseMove        | - | `fn(viewerEvent: ViewerMouseEvent)` | Handler* for mousemove |
 | onMouseDown        | - | `fn(viewerEvent: ViewerMouseEvent)` | Handler* for mousedown |
+| onMouseDownCapture | - | `fn(viewerEvent: ViewerMouseEvent)` | Handler* for mousedown |
 | onTouchStart       | - | `fn(viewerEvent: ViewerTouchEvent)` | Handler* for mousedown |
+| onTouchStartCapture| - | `fn(viewerEvent: ViewerTouchEvent)` | Handler* for mousedown |
 | onTouchMove        | - | `fn(viewerEvent: ViewerTouchEvent)` | Handler* for mousedown |
 | onTouchEnd         | - | `fn(viewerEvent: ViewerTouchEvent)` | Handler* for mousedown |
 | onTouchCancel      | - | `fn(viewerEvent: ViewerTouchEvent)` | Handler* for mousedown |

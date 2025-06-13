@@ -31,6 +31,10 @@ export function onTouchStart(event, ViewerDOM, tool, value, props) {
   return onSingleTouch(event, ViewerDOM, tool, value, props, onMouseDown);
 }
 
+export function onTouchStartCapture(event, ViewerDOM, tool, value, props) {
+  return onTouchStart(event, ViewerDOM, tool, value, props);
+}
+
 export function onTouchMove(event, ViewerDOM, tool, value, props) {
   if (isMultiTouch(event, props)) {
     return onMultiTouch(event, ViewerDOM, tool, value, props);

@@ -39,6 +39,12 @@ export function onMouseDown(event, ViewerDOM, tool, value, props, coords = null)
   return nextValue;
 }
 
+export function onMouseDownCapture(event, ViewerDOM, tool, value, props, coords = null) {
+  // This function is used to capture the mouse down event before any other handlers
+  // This is useful for preventing default actions or stopping propagation
+  return onMouseDown(event, ViewerDOM, tool, value, props, coords);
+}
+
 export function onMouseMove(event, ViewerDOM, tool, value, props, coords = null) {
   const {x, y} = coords || getMousePosition(event, ViewerDOM)
 
